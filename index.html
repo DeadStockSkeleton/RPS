@@ -48,25 +48,25 @@
 
                   
               </div>
-              <div id="game" class="col-md-12 bg-light text-center p-5">
+              <div id="game" class="col-md-12 bg-light position-fixed text-center p-5">
                     <div class="col-xl-6 mx-auto">
                             <label>Please choose <span class="font-weight-bold">one</span></label>
                     </div>
                     <div class="pt-5 mx-auto col-xl-4 d-flex">
                         <div class="form-check mx-auto">
-                            <label name="choice" id="choice" value="rock" class="form-check-label mx-auto border rounded">
+                            <label name="choice" id="choice" value="Rock" class="form-check-label mx-auto border rounded">
                                 <img class="pt-4" width="50%" src="./assets/icns/rock-icn.svg"/>
                               <input type="radio" value="rock" class="form-check-input" name="choice">
                             </label>
                         </div>
                         <div class="form-check mx-auto">
-                            <label name="choice" id="choice" value="paper" class="form-check-label mx-auto border rounded">
+                            <label name="choice" id="choice" value="Paper" class="form-check-label mx-auto border rounded">
                                 <img class="pt-4" width="50%" src="./assets/icns/paper-icn.svg"/>
                               <input type="radio" value="paper" class="form-check-input" name="choice">
                             </label>
                         </div>
                         <div class="form-check mx-auto">
-                            <label name="choice" id="choice" value="scissors" class="form-check-label mx-auto border rounded">
+                            <label name="choice" id="choice" value="Scissors" class="form-check-label mx-auto border rounded">
                                 <img class="pt-4" width="50%" src="./assets/icns/scissors-icn.svg"/>
                               <input type="radio" value="scissors" class="form-check-input" name="choice">
                             </label>
@@ -80,6 +80,61 @@
                             <button id="choose" class="play ml-4 btn btn-primary" disabled> choose</button>
                     </div>
                   
+              </div>
+              <div id="com" class="com col-md-12 bg-light position-fixed text-center">
+                  <div class="col-md-6 mx-auto m-5 text-center">
+                    <label id="comIcn" class=" pt-5">
+                        <img width="100px" src="./assets/icns/com-icn.svg"/>
+                    </label>
+                  </div>
+                  <div class="col-md-12">
+                    <label>computer is thinking...</label>
+                  </div>
+              </div>
+              <div id="fin" class="com col-md-12 position-fixed text-center">
+                <div class="text-center">
+                    <div class="col-md-6 pt-5">
+                        <div id="userRock" value="Rock" name="choiceRock" class="card p-5" style="width: 13rem; position: fixed; left: 25%;">
+                            <img class="card-img-top" width="25%" src="./assets/icns/rock-icn.svg" alt="rock">
+                            <div class="card-body">
+                              <p class="card-text">you chose <span class="font-weight-bold c">Rock</span></p>
+                            </div>
+                        </div>
+                        <div id="userPaper" value="Paper" name="choicePaper" class="card p-5" style="width: 13rem; position: fixed; left: 25%;">
+                            <img class="card-img-top" width="25%" src="./assets/icns/paper-icn.svg" alt="paper">
+                            <div class="card-body">
+                              <p class="card-text">you chose <span class="font-weight-bold c">Paper</span></p>
+                            </div>
+                        </div>
+                        <div id="userScissors" value="Scissors" name="choiceScissors" class="card p-5" style="width: 13rem; position: fixed; left: 25%;">
+                            <img class="card-img-top" width="25%" src="./assets/icns/scissors-icn.svg" alt="scissors">
+                            <div class="card-body">
+                              <p class="card-text">you chose <span class="font-weight-bold c">Scissors</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="comRock" value="Rock" name="choiceRock" class="card p-5" style="width: 13rem; position: fixed; left: 60%;">
+                            <img class="card-img-top" width="25%" src="./assets/icns/rock-icn.svg" alt="rock">
+                            <div class="card-body">
+                              <p class="card-text">COM chose <span class="font-weight-bold c">Rock</span></p>
+                            </div>
+                        </div>
+                        <div id="comPaper" value="Paper" name="choicePaper" class="card p-5" style="width: 13rem; position: fixed; left: 60%;">
+                            <img class="card-img-top" width="25%" src="./assets/icns/paper-icn.svg" alt="paper">
+                            <div class="card-body">
+                              <p class="card-text">COM chose <span class="font-weight-bold c">Paper</span></p>
+                            </div>
+                        </div>
+                        <div id="comScissors" value="Scissors" name="choiceScissors" class="card p-5" style="width: 13rem; position: fixed; left: 60%;">
+                            <img class="card-img-top" width="25%" src="./assets/icns/scissors-icn.svg" alt="scissors">
+                            <div class="card-body">
+                              <p class="card-text">COM chose <span class="font-weight-bold c">Scissors</span></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
               </div>
             
         </main>

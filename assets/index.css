@@ -118,6 +118,10 @@ input, select {
     
 }
 
+#game{
+    z-index:222;
+    height: 100%;
+}
 
 
 #choice{
@@ -133,5 +137,31 @@ input, select {
     -webkit-box-shadow: 0px 10px 15px 0px rgba(71, 0, 165, 0.05);
     box-shadow: 0px 10px 15px 0px rgba(71, 0, 165, 0.05);
 
+}
+
+#comIcn{
+    position: relative;
+    animation: float 1s infinite;
+}
+
+@keyframes float{
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: -5px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+#com{
+    z-index:111;
+    height: 100%;
+}
+
+.card{
+ 
 }
 

@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $("#startBtn").click(function(e){
-        $('#rounds').text('1');
+        var rounds = 0;
+        rounds += 1;
+        $('#rounds').text(rounds)
         $('#start').fadeOut(500);
         $('#game').fadeIn(500);
     })
@@ -19,14 +21,36 @@ $(document).ready(function(){
     })
 
     $('#choose').on('click',function(e){
+        var userScore = 0;
+        var comScore = 0;
         e.preventDefault();
         if($("input[name='choice']:not(checked)")){
             $("input[name='choice']:not(checked)").prop("disabled", true);
         }
         else(
             $("input[name='choice']:checked").prop("disabled", false)
-        )     
+        ) 
+        const selection = $("input[name='choice']:checked").val();   
         $('#game').fadeOut(500);
-        var selection = ("input[name='choice']:checked").val();
+
+        const com = ["Rock", "Paper", "scissors"];
+
+        const comChoice = com[Math.floor(Math.random()*com.length)];
+        alert(comChoice);
+
+        setTimeout(function(){ 
+            $('#com').fadeOut(500); 
+            
+        }, 5000);
+
+
+        
+            
+        
+        
+
     })
+
+    const userScore = $("#userScore");
+    const comScore = $("comScore");
 });
