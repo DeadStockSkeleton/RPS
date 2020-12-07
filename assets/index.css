@@ -211,8 +211,12 @@ input, select {
         opacity: 1;
         left: 0;
     }
+    50%{
+        left: 50%;
+        
+    }
     100%{
-        left: 42.3%;
+        left: 42%;
     }
     }
 
@@ -226,10 +230,10 @@ input, select {
             right: 0;
         }
         50%{
-            right: 42.3%;
+            right: 50%;
         }
         100%{
-            right: 35%;
+            right: 43.5%;
         }
         }
 
