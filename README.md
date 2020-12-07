@@ -2,6 +2,9 @@
 *A nice game of Rock Paper Scissors*
 
 RPS is a simple game of an old classic; **Rock Paper Scissors**
+
+[Play Now](https://deadstockskeleton.github.io/RPS/)
+
 ## How to play
   1. click *Lets PLay*
   2. choose **one** of the *three* options: **Rock Paper or Scissors**
