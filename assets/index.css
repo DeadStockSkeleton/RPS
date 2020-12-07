@@ -104,4 +104,34 @@ input, select {
 
 /*------MY-CODE-------------------------*/
 
+.start{
+    z-index: 333;
+    height: 100%;
+}
+
+.form-check-label{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.05); 
+    box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.05);
+    
+}
+
+
+
+#choice{
+    transition: .3s;
+}
+
+
+
+#choice:hover {
+    transition: .3s;
+    position: relative;
+    top: -10px;
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(71, 0, 165, 0.05);
+    box-shadow: 0px 10px 15px 0px rgba(71, 0, 165, 0.05);
+
+}
 

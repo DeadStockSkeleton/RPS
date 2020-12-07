@@ -6,14 +6,15 @@
         <title></title>
         <meta name="description" content="">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous”/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/index.css">
     </head>
-    <body>
-        <nav class="navbar d-flex border-bottom p-3">
-            <h1 class="font-weight-light">Rock
+    <body class="bg-light">
+        <nav class="navbar  d-flex border-bottom p-3">
+            <h1 class="mx-auto font-weight-light">Rock
                 <span class="font-weight-normal">
                     Paper
                 </span>
@@ -22,7 +23,7 @@
                 </span>
             </h1>
 
-            <div class="col-sm-12 text-center">
+            <div class="col-sm-12 mt-2 text-center">
                 <span id="comScore">
                     0
                 </span>::
@@ -30,25 +31,57 @@
                     0
                 </span>
                 <br>
-                <span id="rounds">0</span>
+                <span class="font-weight-bold">rounds</span>
                 <br>
-                <span>rounds</span>
+                <span value="0" id="rounds">0</span>
             </div>
+
         </nav>
 
-        <main class="col-xl-12 p-5">
-            <div class="col-md-12">
-                <form id="choicesForm">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <button id="rockChoice" class="choice btn btn-outline-secondary p-5 ml-3 rounded" value="rock" type="button" checked onclick=enableBtn();>Button</button>
-                            <button id="paperChoice"  class="choice btn btn-outline-secondary p-5 ml-3 rounded" value="paper" type="button" onclick=enableBtn();>Button</button>
-                            <button id="scissorsChoice" class="choice btn btn-outline-secondary p-5 ml-3 rounded" value="scissors" type="button" onclick=enableBtn();>Button</button>
-                    </div>
+        <main>
+              <div id="start"  class="start bg-light position-fixed col-md-12 p-5 text-center">
+                  <div class="row">
+                    <div class="start col-md-12">
+                      <button id="startBtn" type="button" class="btn btn-primary">Lets play</button>
+                  </div>  
                   </div>
-                  <button id="submit" class="btn btn-primary" type="submit" disabled >Submit Choice</button>
-                </form>
-            </div>
+
+                  
+              </div>
+              <div id="game" class="col-md-12 bg-light text-center p-5">
+                    <div class="col-xl-6 mx-auto">
+                            <label>Please choose <span class="font-weight-bold">one</span></label>
+                    </div>
+                    <div class="pt-5 mx-auto col-xl-4 d-flex">
+                        <div class="form-check mx-auto">
+                            <label name="choice" id="choice" value="rock" class="form-check-label mx-auto border rounded">
+                                <img class="pt-4" width="50%" src="./assets/icns/rock-icn.svg"/>
+                              <input type="radio" value="rock" class="form-check-input" name="choice">
+                            </label>
+                        </div>
+                        <div class="form-check mx-auto">
+                            <label name="choice" id="choice" value="paper" class="form-check-label mx-auto border rounded">
+                                <img class="pt-4" width="50%" src="./assets/icns/paper-icn.svg"/>
+                              <input type="radio" value="paper" class="form-check-input" name="choice">
+                            </label>
+                        </div>
+                        <div class="form-check mx-auto">
+                            <label name="choice" id="choice" value="scissors" class="form-check-label mx-auto border rounded">
+                                <img class="pt-4" width="50%" src="./assets/icns/scissors-icn.svg"/>
+                              <input type="radio" value="scissors" class="form-check-input" name="choice">
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 m-3 ">
+                        <label>you chose: </label> <span class="font-weight-bold" id="chosen"></span>
+                    </div>
+                    <div class="col-md-12 mt-3 mx-auto">
+                            <button id="choose" class="play ml-4 btn btn-primary" disabled> choose</button>
+                    </div>
+                  
+              </div>
+            
         </main>
         
         

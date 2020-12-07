@@ -1,21 +1,32 @@
-const rock = document.getElementById('rockChoice');
-const paper = document.getElementById('paperChoice');
-const scissors = document.getElementById('scissorsChoice');
-var choices = document.getElementsByClassName('choice');
+$(document).ready(function(){
+    $("#startBtn").click(function(e){
+        $('#rounds').text('1');
+        $('#start').fadeOut(500);
+        $('#game').fadeIn(500);
+    })
 
-var form = document.getElementById('choicesForm');
-form.onsubmit = function(e){
-    e.preventDefault();
-    for (var i = 0; i < choices.length; i++){
-       if (choices[0].checked === true){
-           alert(choices);
-       }
-    }
-    
-}
+    $("input[name='choice']").on('click',function(){
+        var picked = $(this).val();
+        $('#chosen').html(picked);
 
-function enableBtn(){
-    var submit = document.getElementById('submit');
-    submit.disabled = false;
+        if($("input[name='choice']:checked")){
+          $('#choose').prop("disabled", false);
+        }
+        else{
+            $('#choose').prop("disabled", true);
+        }
 
-}
+    })
+
+    $('#choose').on('click',function(e){
+        e.preventDefault();
+        if($("input[name='choice']:not(checked)")){
+            $("input[name='choice']:not(checked)").prop("disabled", true);
+        }
+        else(
+            $("input[name='choice']:checked").prop("disabled", false)
+        )     
+        $('#game').fadeOut(500);
+        var selection = ("input[name='choice']:checked").val();
+    })
+});
