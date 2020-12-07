@@ -225,8 +225,11 @@ input, select {
             opacity: 1;
             right: 0;
         }
-        100%{
+        50%{
             right: 42.3%;
+        }
+        100%{
+            right: 35%;
         }
         }
 
